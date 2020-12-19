@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" />
+<link rel="stylesheet" href="/assets/css/styles.css" />
+<title>{{ page.title }}</title>
+
+<header>
+  <a href="/">yukirock</a>
+  <h1>{{ page.title }}</h1>
+</header>
+
+<main>
+  <nav>
+    <ul>
+      {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+  <article class="{{ page.category }}">{{ content }}</article>
+  <aside>
+    <time datetime="{{ page.date | date_to_xmlschema  }}">{{ page.date | date: "%Y 年 %m 月 %d 日" }}</time>
+  </aside>
+</main>

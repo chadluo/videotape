@@ -27,7 +27,6 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
-theme: minima
 plugins:
   - jekyll-feed
 
@@ -59,3 +58,5 @@ markdown: kramdown
 kramdown:
   html_to_native: true
   hard_wrap: true
+
+permalink: /:title/

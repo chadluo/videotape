@@ -2,7 +2,7 @@
 layout: post
 title: "墨案 InkPad X 简评及牢骚"
 date: 2020-08-26 22:00:46 +0800
-categories: review
+category: review
 ---
 
 本来想录视频，毕竟各种交互录成视频会直观一些，但录完发现时间太长，想说的太多没写逐字稿一口气也没说清楚，录音笔和 iPhone 录音速度还不一样没法校准，所以下次再当视频 up 主啦。

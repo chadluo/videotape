@@ -1,0 +1,47 @@
+body {
+  font-family: "Noto Serif SC", serif;
+}
+
+header,
+main {
+  max-width: 1440px;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  gap: 2em;
+}
+
+header {
+  margin: 10rem auto 2rem;
+}
+
+h1 {
+  font-size: 1rem;
+  line-height: 1;
+  margin: 0;
+}
+
+main {
+  margin: auto;
+}
+
+nav ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+nav li {
+  list-style: none;
+}
+
+article h2:first-child,
+article p:first-child {
+  margin-top: 0;
+}
+
+article.novel p {
+  margin: 0;
+}
+
+article.novel p + p {
+  text-indent: 2em;
+}
