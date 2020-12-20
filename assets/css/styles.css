@@ -62,6 +62,16 @@ article blockquote {
   margin: calc(var(--line-height) / 2) 0 calc(var(--line-height) / 2) 2em;
 }
 
+article hr {
+  border: none;
+  margin: var(--line-height) auto;
+  text-align: center;
+}
+
+article hr::before {
+  content: "❦";
+}
+
 article.novel p {
   margin: 0;
 }
