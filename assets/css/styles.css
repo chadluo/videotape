@@ -1,28 +1,34 @@
+:root {
+  --font-size: 18px;
+  --line-height: 30px;
+}
+
 body {
-  font-family: "Noto Serif SC", serif;
+  font: var(--font-size) / var(--line-height) "Noto Serif SC", serif;
 }
 
-header,
-main {
-  width: calc(100% - 2rem);
-  max-width: 1440px;
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  gap: 2em;
+a {
+  text-decoration: none;
 }
 
-header {
-  margin: 10rem auto 2rem;
+@media screen and (min-width: 801px) {
+  main {
+    width: calc(100% - 2rem);
+    max-width: 1440px;
+    margin: calc(var(--line-height) * 5) auto var(--line-height);
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 2rem;
+  }
 }
 
 h1 {
-  font-size: 1rem;
-  line-height: 1;
-  margin: 0;
+  font-size: var(--font-size);
+  margin: 0 0 var(--line-height);
 }
 
-main {
-  margin: auto;
+nav {
+  margin-bottom: var(--line-height);
 }
 
 nav ul {
@@ -34,9 +40,26 @@ nav li {
   list-style: none;
 }
 
-article h2:first-child,
-article p:first-child {
+article[lang="jp"] {
+  font-family: "Noto Serif JP", serif;
+}
+
+article h2 {
+  font-size: 1rem;
+  margin: var(--line-height) 0;
+}
+
+article p {
+  margin: calc(var(--line-height) / 2) 0;
+}
+
+article > h2:first-child,
+article > p:first-child {
   margin-top: 0;
+}
+
+article blockquote {
+  margin: calc(var(--line-height) / 2) 0 calc(var(--line-height) / 2) 2em;
 }
 
 article.novel p {
@@ -45,4 +68,24 @@ article.novel p {
 
 article.novel p + p {
   text-indent: 2em;
+}
+
+aside {
+  padding-top: calc(var(--line-height) * 2);
+  color: #666;
+}
+
+@media screen and (max-width: 800px) {
+  nav li {
+    display: inline-block;
+    margin-right: 1em;
+  }
+
+  article.novel p + p {
+    text-indent: 1em;
+  }
+
+  aside {
+    padding-top: calc(var(--line-height) / 2);
+  }
 }
