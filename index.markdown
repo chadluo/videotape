@@ -1,8 +1,8 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
+title: "……"
 layout: post
+note: "芥川龍之介『蜘蛛の糸』"
+lang: jp
 ---
 
-yay
+> しかし極楽の蓮池の蓮は、少しもそんな事には頓着とんじゃく致しません。その玉のような白い花は、御釈迦様の御足おみあしのまわりに、ゆらゆら萼うてなを動かして、そのまん中にある金色の蕊ずいからは、何とも云えない好よい匂が、絶間たえまなくあたりへ溢あふれて居ります。極楽ももう午ひるに近くなったのでございましょう。
