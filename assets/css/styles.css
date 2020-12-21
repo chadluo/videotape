@@ -1,19 +1,70 @@
 :root {
   --font-size: 18px;
   --line-height: 30px;
+
+  --solarized-base03: #002b36;
+  --solarized-base02: #073642;
+  --solarized-base01: #586e75;
+  --solarized-base00: #657b83;
+  --solarized-base0: #839496;
+  --solarized-base1: #93a1a1;
+  --solarized-base2: #eee8d5;
+  --solarized-base3: #fdf6e3;
+  --solarized-yellow: #b58900;
+  --solarized-orange: #cb4b16;
+  --solarized-red: #dc322f;
+  --solarized-magenta: #d33682;
+  --solarized-violet: #6c71c4;
+  --solarized-blue: #268bd2;
+  --solarized-cyan: #2aa198;
+  --solarized-green: #859900;
+}
+
+@media screen and (prefers-color-scheme: light) {
+  :root {
+    --background: var(--solarized-base3);
+    --text: var(--solarized-base00);
+    --text-emphasized: var(--solarized-base01);
+    --text-sub: var(--solarized-base1);
+    --link: var(--solarized-violet);
+    --link-hover: var(--solarized-cyan);
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--solarized-base03);
+    --text: var(--solarized-base0);
+    --text-emphasized: var(--solarized-base1);
+    --text-sub: var(--solarized-base01);
+    --link: var(--solarized-violet);
+    --link-hover: var(--solarized-cyan);
+  }
 }
 
 body {
+  color: var(--text);
+  background: var(--background);
   font: var(--font-size) / var(--line-height) "Noto Serif SC", serif;
 }
 
 a {
   text-decoration: none;
+  color: var(--link);
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+h1,
+h2 {
+  color: var(--text-emphasized);
 }
 
 @media screen and (min-width: 801px) {
   main {
-    width: calc(100% - 2rem);
+    width: calc(100% - 6rem);
     max-width: 1440px;
     margin: calc(var(--line-height) * 5) auto var(--line-height);
     display: grid;
@@ -53,11 +104,6 @@ article p {
   margin: calc(var(--line-height) / 2) 0;
 }
 
-article > h2:first-child,
-article > p:first-child {
-  margin-top: 0;
-}
-
 article blockquote {
   margin: calc(var(--line-height) / 2) 0 calc(var(--line-height) / 2) 2em;
 }
@@ -70,6 +116,7 @@ article hr {
 
 article hr::before {
   content: "❦";
+  color: var(--text-sub);
 }
 
 article.novel p {
@@ -82,7 +129,7 @@ article.novel p + p {
 
 aside {
   padding-top: calc(var(--line-height) * 2);
-  color: #666;
+  color: var(--text-sub);
 }
 
 @media screen and (max-width: 800px) {
