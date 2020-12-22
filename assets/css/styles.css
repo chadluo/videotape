@@ -2,6 +2,8 @@
   --font-size: 18px;
   --line-height: 30px;
 
+  /* https://ethanschoonover.com/solarized/ */
+
   --solarized-base03: #002b36;
   --solarized-base02: #073642;
   --solarized-base01: #586e75;
@@ -10,6 +12,7 @@
   --solarized-base1: #93a1a1;
   --solarized-base2: #eee8d5;
   --solarized-base3: #fdf6e3;
+
   --solarized-yellow: #b58900;
   --solarized-orange: #cb4b16;
   --solarized-red: #dc322f;
@@ -29,6 +32,10 @@
     --link: var(--solarized-violet);
     --link-hover: var(--solarized-cyan);
   }
+  ::selection {
+    background-color: var(--solarized-base2);
+    color: var(--solarized-base01);
+  }
 }
 
 @media screen and (prefers-color-scheme: dark) {
@@ -40,11 +47,15 @@
     --link: var(--solarized-violet);
     --link-hover: var(--solarized-cyan);
   }
+  ::selection {
+    background-color: var(--solarized-base02);
+    color: var(--solarized-base1);
+  }
 }
 
 body {
   color: var(--text);
-  background: var(--background);
+  background-color: var(--background);
   font: var(--font-size) / var(--line-height) "Noto Serif SC", serif;
 }
 
