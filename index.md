@@ -1,7 +1,7 @@
 ---
 title: "……"
 layout: post
-note: "芥川龍之介『蜘蛛の糸』"
+description: "芥川龍之介『蜘蛛の糸』"
 lang: jp
 ---
 
