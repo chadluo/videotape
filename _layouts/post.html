@@ -8,6 +8,7 @@
 />
 <link rel="stylesheet" href="/assets/css/styles.css" />
 <title>{% if page.title != "……" %}{{ page.title }}{% else %}yukirock{% endif %}</title>
+{% seo title=false %}
 
 <main>
   <nav>
@@ -23,8 +24,7 @@
     {{ content }}
   </article>
   <aside>
-    {% if page.note %} {{ page.note }} <br />
-    {% endif %}
+    {% if page.description %}{{ page.description }}<br />{% endif %}
     <time datetime="{{ page.date | date_to_xmlschema }}"
       >{{ page.date | date: "%Y&nbsp;年 %-m&nbsp;月 %-d&nbsp;日" }}</time
     >
