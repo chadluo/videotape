@@ -23,19 +23,18 @@
   --solarized-green: #859900;
 }
 
-@media screen and (prefers-color-scheme: light) {
-  :root {
-    --background: var(--solarized-base3);
-    --text: var(--solarized-base00);
-    --text-emphasized: var(--solarized-base01);
-    --text-sub: var(--solarized-base1);
-    --link: var(--solarized-violet);
-    --link-hover: var(--solarized-cyan);
-  }
-  ::selection {
-    background-color: var(--solarized-base2);
-    color: var(--solarized-base01);
-  }
+:root {
+  --background: var(--solarized-base3);
+  --text: var(--solarized-base00);
+  --text-emphasized: var(--solarized-base01);
+  --text-sub: var(--solarized-base1);
+  --link: var(--solarized-blue);
+  --link-hover: var(--solarized-cyan);
+  --link-highlight: var(--solarized-orange);
+}
+::selection {
+  background-color: var(--solarized-base2);
+  color: var(--solarized-base01);
 }
 
 @media screen and (prefers-color-scheme: dark) {
@@ -44,8 +43,6 @@
     --text: var(--solarized-base0);
     --text-emphasized: var(--solarized-base1);
     --text-sub: var(--solarized-base01);
-    --link: var(--solarized-violet);
-    --link-hover: var(--solarized-cyan);
   }
   ::selection {
     background-color: var(--solarized-base02);
@@ -105,6 +102,12 @@ nav ul {
 
 nav li {
   list-style: none;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+nav a.current {
+  color: var(--link-highlight);
 }
 
 article:lang(jp),
