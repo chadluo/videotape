@@ -58,3 +58,5 @@ kramdown:
   hard_wrap: true
 
 permalink: /:title/
+
+future: true
