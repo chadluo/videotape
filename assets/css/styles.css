@@ -75,17 +75,6 @@ main {
   margin: 1rem auto;
 }
 
-@media screen and (min-width: 801px) {
-  main {
-    width: calc(100% - 6rem);
-    max-width: 94rem;
-    margin: calc(var(--line-height) * 5) auto var(--line-height);
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    gap: 2rem;
-  }
-}
-
 h1 {
   font-size: var(--font-size);
   margin: 0 0 var(--line-height);
@@ -116,7 +105,7 @@ aside:lang(jp) {
 }
 
 article h2 {
-  font-size: 1rem;
+  font-size: var(--font-size);
   margin: var(--line-height) 0;
 }
 
@@ -153,17 +142,62 @@ aside {
   color: var(--text-sub);
 }
 
-@media screen and (max-width: 800px) {
-  nav li {
-    display: inline-block;
-    margin-right: 1em;
+@media screen and (min-width: 801px) {
+  main {
+    width: calc(98% - 6rem);
+    max-width: 96rem;
+    margin: calc(var(--line-height) * 3) auto var(--line-height);
+    display: grid;
+    grid-template-columns: 2fr 5fr 2fr;
+    gap: 3rem;
   }
+  nav.mobile {
+    display: none;
+  }
+}
 
+@media screen and (max-width: 800px) {
+  nav.desktop {
+    display: none;
+  }
+  nav.mobile summary {
+    font-weight: bold;
+    margin-bottom: calc(var(--line-height) / 2);
+  }
   article.novel p + p {
     text-indent: 1em;
   }
 
   aside {
     padding-top: calc(var(--line-height) / 2);
+  }
+}
+
+@media print {
+  :root {
+    --font-size: 8pt;
+    --line-height: 14pt;
+  }
+  nav {
+    display: none;
+  }
+  article h1 {
+    text-align: center;
+    font-size: calc(var(--font-size) * 1.5);
+    margin-bottom: calc(var(--line-height) * 2);
+  }
+  .content {
+    column-count: 2;
+    column-gap: 2em;
+  }
+  article p {
+    margin: 0;
+  }
+  article p + p {
+    text-indent: 2em;
+  }
+  article h2 {
+    text-indent: 4em;
+    page-break-inside: avoid;
   }
 }
