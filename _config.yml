@@ -27,6 +27,7 @@ lang: "zh_CN"
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - kramdown
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -47,9 +48,6 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
-gems:
-  - kramdown
 
 markdown: kramdown
 
