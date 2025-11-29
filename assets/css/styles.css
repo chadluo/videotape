@@ -35,6 +35,7 @@
   --link-hover: var(--solarized-cyan);
   --link-highlight: var(--solarized-orange);
 }
+
 ::selection {
   background-color: var(--solarized-base2);
   color: var(--solarized-base01);
@@ -47,6 +48,7 @@
     --text-emphasized: var(--solarized-base1);
     --text-sub: var(--solarized-base01);
   }
+
   ::selection {
     background-color: var(--solarized-base02);
     color: var(--solarized-base1);
@@ -57,6 +59,7 @@ body {
   color: var(--text);
   background-color: var(--background);
   font: var(--font-size) / var(--line-height) "Noto Serif SC", serif;
+  font-optical-sizing: auto;
 }
 
 a {
@@ -144,7 +147,7 @@ article.novel p {
   text-align: justify;
 }
 
-article.novel p + p {
+article.novel p+p {
   text-indent: 2em;
 }
 
@@ -162,6 +165,7 @@ aside {
     grid-template-columns: 2fr 5fr 2fr;
     gap: 3rem;
   }
+
   nav.mobile {
     display: none;
   }
@@ -171,11 +175,13 @@ aside {
   nav.desktop {
     display: none;
   }
+
   nav.mobile summary {
     font-weight: bold;
     margin-bottom: calc(var(--line-height) / 2);
   }
-  article.novel p + p {
+
+  article.novel p+p {
     text-indent: 1em;
   }
 
@@ -189,24 +195,30 @@ aside {
     --font-size: 8pt;
     --line-height: 14pt;
   }
+
   nav {
     display: none;
   }
+
   article h1 {
     text-align: center;
     font-size: calc(var(--font-size) * 1.5);
     margin-bottom: calc(var(--line-height) * 2);
   }
+
   .content {
     column-count: 2;
     column-gap: 2em;
   }
+
   article p {
     margin: 0;
   }
-  article p + p {
+
+  article p+p {
     text-indent: 2em;
   }
+
   article h2 {
     text-indent: 4em;
     page-break-inside: avoid;
@@ -223,17 +235,21 @@ article pre {
 .highlight table td {
   padding: 5px;
 }
+
 .highlight table pre {
   margin: 0;
 }
+
 .highlight,
 .highlight .w {
   color: #586e75;
 }
+
 .highlight .err {
   color: #002b36;
   background-color: #dc322f;
 }
+
 .highlight .c,
 .highlight .ch,
 .highlight .cd,
@@ -243,31 +259,39 @@ article pre {
 .highlight .cs {
   color: #657b83;
 }
+
 .highlight .cp {
   color: #b58900;
 }
+
 .highlight .nt {
   color: #b58900;
 }
+
 .highlight .o,
 .highlight .ow {
   color: #93a1a1;
 }
+
 .highlight .p,
 .highlight .pi {
   color: #93a1a1;
 }
+
 .highlight .gi {
   color: #859900;
 }
+
 .highlight .gd {
   color: #dc322f;
 }
+
 .highlight .gh {
   color: #268bd2;
   background-color: #002b36;
   font-weight: bold;
 }
+
 .highlight .k,
 .highlight .kn,
 .highlight .kp,
@@ -275,15 +299,19 @@ article pre {
 .highlight .kv {
   color: #6c71c4;
 }
+
 .highlight .kc {
   color: #cb4b16;
 }
+
 .highlight .kt {
   color: #cb4b16;
 }
+
 .highlight .kd {
   color: #cb4b16;
 }
+
 .highlight .s,
 .highlight .sb,
 .highlight .sc,
@@ -295,30 +323,39 @@ article pre {
 .highlight .s1 {
   color: #859900;
 }
+
 .highlight .sa {
   color: #6c71c4;
 }
+
 .highlight .sr {
   color: #2aa198;
 }
+
 .highlight .si {
   color: #d33682;
 }
+
 .highlight .se {
   color: #d33682;
 }
+
 .highlight .nn {
   color: #b58900;
 }
+
 .highlight .nc {
   color: #b58900;
 }
+
 .highlight .no {
   color: #b58900;
 }
+
 .highlight .na {
   color: #268bd2;
 }
+
 .highlight .m,
 .highlight .mb,
 .highlight .mf,
@@ -329,6 +366,7 @@ article pre {
 .highlight .mx {
   color: #859900;
 }
+
 .highlight .ss {
   color: #859900;
 }
